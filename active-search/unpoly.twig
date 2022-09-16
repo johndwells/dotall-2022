@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Craft CMS Active Search with Unpoly</title>
+  <script src="https://unpkg.com/unpoly@2.6.1/unpoly.min.js"></script>
+</head>
+<body>
+
+<form action="{{ craft.app.request.pathInfo }}"
+      method="post"
+      up-autosubmit
+      up-delay="300"
+      up-target="#results">
+  <label>Search Contacts
+    <input value="" type="search" name="q" placeholder="Begin Typing To Search Users...">
+  </label>
+</form>
+
+<table id="results">
+  <thead>
+  <tr>
+    <th>Title</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for e in craft.entries()
+    .search(craft.app.request.getParam('q'))
+    .all() %}
+    <tr>
+      <td>{{ e.title }}</td>
+    </tr>
+  {% else %}
+    <tr>
+      <td>No results.</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</body>
+</html>
