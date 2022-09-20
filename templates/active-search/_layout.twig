@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Craft CMS Active Search with Unpoly</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script src="https://unpkg.com/htmx.org@1.8.0" integrity="sha384-cZuAZ+ZbwkNRnrKi05G/fjBX+azI9DNOkNYysZ0I/X5ZFgsmMiBXgDZof30F5ofc" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/unpoly@2.6.1/unpoly.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/unpoly@2.6.1/unpoly.min.css">
+  <style type="text/tailwindcss">
+    form {
+      @apply w-full flex flex-row items-center gap-4;
+      @apply px-4 py-6;
+    }
+
+    form input {
+      @apply flex-1
+    }
+
+    form button {
+      @apply w-12;
+    }
+
+    .loading {
+      @apply opacity-0;
+    }
+
+    nav .is-current {
+      @apply bg-white text-blue-300;
+    }
+
+    .up-active .loading,
+    .loading.htmx-request {
+      @apply opacity-100;
+    }
+
+    table {
+      @apply w-full;
+    }
+
+    tr {
+      @apply border-t border-gray-100;
+    }
+
+    th {
+      @apply bg-gray-100 text-left;
+    }
+
+    th, td {
+      @apply px-4 py-2;
+    }
+  </style>
+</head>
+<body class="p-8 bg-blue-100">
+  <div class="w-full max-w-xl mx-auto bg-white shadow">
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+</body>
+</html>

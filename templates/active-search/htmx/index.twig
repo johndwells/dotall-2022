@@ -1,0 +1,25 @@
+{% extends "active-search/_layout.twig" %}
+
+{% block content %}
+  <form action="/{{ craft.app.request.pathInfo }}"
+        method="get">
+    <label for="q">Search Contacts</label>
+    <input value="{{ craft.app.request.getparam('q') }}"
+           type="search"
+           id="q"
+           name="q"
+           placeholder="Begin Typing To Search Users..."
+           hx-indicator=".loading"
+           hx-get="/active-search/htmx/results"
+           hx-target="#results"
+           hx-trigger="keyup changed delay:500ms, search">
+    <button type="submit"
+            class="loading">
+      {{ source('_svg/loading.svg')|raw }}
+    </button>
+  </form>
+
+  <div id="results">
+    {{ include("active-search/htmx/results.twig") }}
+  </div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "active-search/_layout.twig" %}
+
+{% block content %}
+  <form action="/{{ craft.app.request.pathInfo }}"
+         method="get"
+         up-autosubmit
+         up-delay="500"
+         up-target="#results">
+    <label for="q">Search Contacts</label>
+    <input value="{{ craft.app.request.getparam('q') }}"
+           type="search"
+           id="q"
+           name="q"
+           placeholder="Begin Typing To Search Users...">
+    <button type="submit"
+            class="loading">
+      {{ source('_svg/loading.svg')|raw }}
+    </button>
+  </form>
+
+  <div id="results">
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for e in craft.users()
+          .search(craft.app.request.getParam('q'))
+          .all() %}
+          <tr>
+            <td>{{ e.firstName }}</td>
+            <td>{{ e.lastName }}</td>
+            <td>{{ e.email }}</td>
+          </tr>
+        {% else %}
+          <tr>
+            <td colspan="3">No results.</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
