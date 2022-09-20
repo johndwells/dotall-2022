@@ -2,6 +2,9 @@
 namespace modules;
 
 use Craft;
+use craft\web\twig\variables\CraftVariable;
+use modules\sitemodule\variables\SiteVariable;
+use yii\base\Event;
 
 /**
  * Custom module class.
@@ -40,5 +43,9 @@ class Module extends \yii\base\Module
         parent::init();
 
         // Custom initialization code goes here...
+	    if(isset($_GET['q'])) {
+	    	Craft::info('Sleeping for 1 second to demo network latency', __METHOD__);
+		    sleep(1);
+	    }
     }
 }
