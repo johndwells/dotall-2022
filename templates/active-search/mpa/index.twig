@@ -1,5 +1,7 @@
 {% extends "active-search/_layout.twig" %}
 
+{% block title %}Non-Active Search{% endblock %}
+
 {% block content %}
   <form action="/{{ craft.app.request.pathInfo }}"
         method="get">
