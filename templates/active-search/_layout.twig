@@ -8,6 +8,17 @@
   <script src="https://unpkg.com/htmx.org@1.8.0" integrity="sha384-cZuAZ+ZbwkNRnrKi05G/fjBX+azI9DNOkNYysZ0I/X5ZFgsmMiBXgDZof30F5ofc" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/unpoly@2.6.1/unpoly.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/unpoly@2.6.1/unpoly.min.css">
+  <script>
+    // HTMX & Unpoly interoperability
+    addEventListener('DOMContentLoaded', (event) => {
+      up.on('up:fragment:inserted', function(event, fragment) {
+        htmx.process(fragment);
+      });
+      htmx.onLoad(function(target) {
+        up.hello(target);
+      });
+    });
+  </script>
   <style type="text/tailwindcss">
     form {
       @apply w-full flex flex-row items-center gap-4;
