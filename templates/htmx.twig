@@ -11,10 +11,10 @@
            id="q"
            name="q"
            placeholder="Begin Typing To Search Users..."
-           hx-indicator=".loading"
            hx-get="/htmx/results"
            hx-target="#results"
-           hx-trigger="keyup changed delay:500ms, search">
+           hx-trigger="keyup changed delay:500ms, search"
+           hx-indicator=".loading">
     <button type="submit"
             class="loading">
       {{ source('_svg/loading.svg')|raw }}
