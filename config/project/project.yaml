@@ -1,4 +1,4 @@
-dateModified: 1663696756
+dateModified: 1663726864
 email:
   fromEmail: digital@onedarnleyroad.com
   fromName: 'DotAll 2022'
@@ -13,6 +13,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 4.4.0
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
 system:
   edition: pro
   live: true
