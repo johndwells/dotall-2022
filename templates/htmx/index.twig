@@ -1,4 +1,4 @@
-{% extends "active-search/_layout.twig" %}
+{% extends "_layouts/default.twig" %}
 
 {% block title %}Active Search w/HTMX{% endblock %}
 
@@ -12,7 +12,7 @@
            name="q"
            placeholder="Begin Typing To Search Users..."
            hx-indicator=".loading"
-           hx-get="/active-search/htmx/results"
+           hx-get="/htmx/results"
            hx-target="#results"
            hx-trigger="keyup changed delay:500ms, search">
     <button type="submit"
@@ -22,6 +22,6 @@
   </form>
 
   <div id="results">
-    {{ include("active-search/htmx/results.twig") }}
+    {{ include("htmx/results.twig") }}
   </div>
 {% endblock %}

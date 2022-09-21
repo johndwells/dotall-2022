@@ -1,17 +1,22 @@
-{% extends "active-search/_layout.twig" %}
+{% extends "_layouts/default.twig" %}
 
-{% block title %}Non-Active Search{% endblock %}
+{% block title %}Active Search w/Unpoly{% endblock %}
 
 {% block content %}
   <form action="/{{ craft.app.request.pathInfo }}"
-        method="get">
+         method="get"
+         up-autosubmit
+         up-delay="500"
+         up-target="#results">
     <label for="q">Search Contacts</label>
     <input value="{{ craft.app.request.getparam('q') }}"
            type="search"
            id="q"
-           name="q">
-    <button type="submit">
-      Go
+           name="q"
+           placeholder="Begin Typing To Search Users...">
+    <button type="submit"
+            class="loading">
+      {{ source('_svg/loading.svg')|raw }}
     </button>
   </form>
 
