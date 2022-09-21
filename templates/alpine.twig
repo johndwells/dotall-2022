@@ -6,7 +6,7 @@
   <form action="/{{ craft.app.request.pathInfo }}"
         method="get"
         x-data="{
-          q: '{{ craft.app.request.getparam('q') }}',
+          q: '{{ craft.app.request.getParam('q') }}',
           search() {
             if(this.q.length < 3 && this.q.length > 0) {
               return;
@@ -15,7 +15,7 @@
           }
         }">
     <label for="q">Search Contacts</label>
-    <input value="{{ craft.app.request.getparam('q') }}"
+    <input value="{{ craft.app.request.getParam('q') }}"
            type="search"
            id="q"
            name="q"
