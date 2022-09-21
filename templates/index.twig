@@ -3,35 +3,38 @@
 {% block title %}Active Search Demos{% endblock %}
 
 {% block content %}
-  <div class="min-h-[calc(100vh-4rem)] flex justify-center items-center">
-    <nav class="m-auto flex flex-wrap flex-row gap-4 justify-center items-center p-8">
-      {% for x in [{
-          uri : 'mpa',
-          title : 'MPA'
-        },
-        {
-          uri : 'unpoly',
-          title: 'Unpoly'
-        },
-        {
-          uri : 'htmx',
-          title: 'HTMX'
-        },
-        {
-          uri : 'alpine',
-          title: 'Alpine'
-        },
-        {
-          uri : 'sprig',
-          title: 'Sprig'
-        }
-      ] %}
-        <a href="{{ url(x.uri) }}"
-           up-layer="new"
-           class="py-2 px-6 text-lg border border-blue-300 text-blue-300 rounded focus:bg-blue-300 hover:bg-blue-300 hover:text-white focus:text-white">
-          {{ x.title }}
-        </a>
-      {% endfor %}
-    </nav>
+  <div class="min-h-[calc(100vh-4rem)] flex flex-col justify-center items-center">
+    <h1 class="text-2xl font-bold">Active Search Demos</h1>
+    <div class="flex justify-center items-center">
+      <nav class="m-auto flex flex-wrap flex-row gap-4 justify-center items-center p-8">
+        {% for x in [{
+            uri : 'mpa',
+            title : 'MPA'
+          },
+          {
+            uri : 'unpoly',
+            title: 'Unpoly'
+          },
+          {
+            uri : 'htmx',
+            title: 'HTMX'
+          },
+          {
+            uri : 'sprig',
+            title: 'Sprig'
+          },
+          {
+            uri : 'alpine',
+            title: 'Alpine & Unpoly'
+          }
+        ] %}
+          <a href="{{ url(x.uri) }}"
+             up-layer="new"
+             class="py-2 px-6 text-lg border border-blue-300 text-blue-300 rounded focus:bg-blue-300 hover:bg-blue-300 hover:text-white focus:text-white">
+            {{ x.title }}
+          </a>
+        {% endfor %}
+      </nav>
+    </div>
   </div>
 {% endblock %}
