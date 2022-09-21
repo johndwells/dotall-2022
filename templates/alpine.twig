@@ -15,13 +15,12 @@
           }
         }">
     <label for="q">Search Contacts</label>
-    <input value="{{ craft.app.request.getParam('q') }}"
+    <input x-model="q"
+           x-on:input.debounce.500ms="search()"
            type="search"
            id="q"
            name="q"
-           placeholder="Begin Typing To Search Users..."
-           x-on:input.debounce.500ms="search()"
-           x-model="q">
+           placeholder="Begin Typing To Search Users...">
     <button type="submit"
             class="loading">
       {{ source('_svg/loading.svg')|raw }}
