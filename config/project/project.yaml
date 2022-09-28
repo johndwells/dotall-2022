@@ -1,13 +1,13 @@
-dateModified: 1664359674
+dateModified: 1664363545
 email:
   fromEmail: digital@onedarnleyroad.com
-  fromName: 'DotAll 2022'
+  fromName: 'Dot All 2022'
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
-    38209a26-0ea6-4515-8b19-264eda8200b4: 'DotAll 2022' # DotAll 2022
+    38209a26-0ea6-4515-8b19-264eda8200b4: 'Dot All 2022' # Dot All 2022
     cc72290f-c140-4323-a105-537fd6fd2957: Common # Common
-    f8cbf4a4-9753-414c-80a1-0e17ba7e54bd: 'DotAll 2022' # DotAll 2022
+    f8cbf4a4-9753-414c-80a1-0e17ba7e54bd: 'Dot All 2022' # Dot All 2022
 plugins:
   sprig:
     edition: standard
@@ -16,7 +16,7 @@ plugins:
 system:
   edition: pro
   live: true
-  name: 'DotAll 2022'
+  name: 'Dot All 2022'
   schemaVersion: 4.0.0.9
   timeZone: America/Los_Angeles
 users:
