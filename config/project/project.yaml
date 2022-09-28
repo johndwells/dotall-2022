@@ -1,4 +1,4 @@
-dateModified: 1663726864
+dateModified: 1664359674
 email:
   fromEmail: digital@onedarnleyroad.com
   fromName: 'DotAll 2022'
@@ -9,10 +9,6 @@ meta:
     cc72290f-c140-4323-a105-537fd6fd2957: Common # Common
     f8cbf4a4-9753-414c-80a1-0e17ba7e54bd: 'DotAll 2022' # DotAll 2022
 plugins:
-  feed-me:
-    edition: standard
-    enabled: true
-    schemaVersion: 4.4.0
   sprig:
     edition: standard
     enabled: true

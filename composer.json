@@ -1,7 +1,6 @@
 {
   "require": {
     "craftcms/cms": "4.2.5.1",
-    "craftcms/feed-me": "5.0.4",
     "putyourlightson/craft-sprig": "^2.1",
     "vlucas/phpdotenv": "^5.4.0"
   },
@@ -26,7 +25,7 @@
   },
   "scripts": {
     "post-root-package-install": [
-      "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\""
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ]
   }
 }
