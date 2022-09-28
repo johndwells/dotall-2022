@@ -12,6 +12,8 @@ You can see this demo in action at: https://dotall22.1dr.digital
 
 ## Getting Started
 
+_Note: `composer create-project` not working yet but hold tight..._
+
 1. `composer create-project johndwells/dotall-2022 PATH --no-install`
 2. `ddev config`
 3. `make seed`
