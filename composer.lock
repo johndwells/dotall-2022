@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cfb4394939e1bda985e29ca50bc70aaa",
+    "content-hash": "985d9c493c8c122373094d3706d644c2",
     "packages": [
         {
             "name": "cakephp/core",
@@ -531,11 +531,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.2.5",
+            "version": "4.2.5.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/8c9199e4d1c528f9e371a8ba9cb0246b65510840",
-                "reference": "8c9199e4d1c528f9e371a8ba9cb0246b65510840",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/68fbe2e48c83b9cd13292699de24a8849f6492d8",
+                "reference": "68fbe2e48c83b9cd13292699de24a8849f6492d8",
                 "shasum": ""
             },
             "require": {
@@ -580,7 +580,8 @@
                 "yiisoft/yii2-symfonymailer": "^2.0.0"
             },
             "conflict": {
-                "league/oauth2-client": "2.4.0"
+                "league/oauth2-client": "2.4.0",
+                "webonyx/graphql-php": "14.11.7"
             },
             "provide": {
                 "bower-asset/inputmask": "~3.2.2|~3.3.5",
@@ -625,7 +626,7 @@
                 "docs": "https://docs.craftcms.com/v3/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2022-09-20T16:02:05+00:00"
+            "time": "2022-09-21T13:20:27+00:00"
         },
         {
             "name": "craftcms/feed-me",
@@ -1466,7 +1467,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v9.31.0",
+            "version": "v9.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -1521,7 +1522,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v9.31.0",
+            "version": "v9.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -1567,7 +1568,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v9.31.0",
+            "version": "v9.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -1615,7 +1616,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v9.31.0",
+            "version": "v9.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -5051,11 +5052,11 @@
         },
         {
             "name": "webonyx/graphql-php",
-            "version": "v14.11.6",
+            "version": "v14.11.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/6070542725b61fc7d0654a8a9855303e5e157434",
-                "reference": "6070542725b61fc7d0654a8a9855303e5e157434",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/04a48693acd785330eefd3b0e4fa67df8dfee7c3",
+                "reference": "04a48693acd785330eefd3b0e4fa67df8dfee7c3",
                 "shasum": ""
             },
             "require": {
@@ -5082,7 +5083,7 @@
                 "api",
                 "graphql"
             ],
-            "time": "2022-04-13T16:25:32+00:00"
+            "time": "2022-09-21T15:35:03+00:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -5605,5 +5606,5 @@
     "platform-overrides": {
         "php": "8.0.2"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
