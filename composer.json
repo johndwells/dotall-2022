@@ -1,8 +1,20 @@
 {
+  "name": "johndwells/dotall-2022",
+  "description": "Active Search Demo as part of my talk for Dot All 2022",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "htmx",
+    "unpoly",
+    "sprig",
+    "hotwire"
+  ],
+  "license": "0BSD",
   "require": {
-    "craftcms/cms": "4.2.5.1",
+    "craftcms/cms": "^4.2",
     "putyourlightson/craft-sprig": "^2.1",
-    "vlucas/phpdotenv": "^5.4.0"
+    "vlucas/phpdotenv": "^5.4"
   },
   "require-dev": {
     "yiisoft/yii2-shell": "^2.0.3"
