@@ -16,6 +16,7 @@
     "putyourlightson/craft-sprig": "^2.1",
     "vlucas/phpdotenv": "^5.4"
   },
+  "minimum-stability": "stable",
   "require-dev": {
     "yiisoft/yii2-shell": "^2.0.3"
   },
